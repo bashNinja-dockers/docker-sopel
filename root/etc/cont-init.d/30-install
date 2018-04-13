@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+
+if [ ! -d "/config/.sopel" ]; then
+    mkdir -p /config/.sopel/log
+    cp -r /defaults/default.cfg /config/.sopel/
+fi
+if [ ! -d "/config/.sopel/log" ]; then
+    mkdir -p /config/.sopel/log
+fi
