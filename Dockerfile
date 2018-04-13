@@ -6,6 +6,11 @@ ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="Mike Weaver"
 
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+
+
 RUN \
 echo "**** install packages ****" && \
 apk add --no-cache \
@@ -28,5 +33,4 @@ rm -rf \
 COPY root/ /
 
 # ports and volumes
-VOLUME /config /comics /downloads
-EXPOSE 8090
+VOLUME /config

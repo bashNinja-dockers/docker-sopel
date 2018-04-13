@@ -2,8 +2,8 @@
 
 if [ ! -d "/config/.sopel" ]; then
     mkdir -p /config/.sopel/log
-    cp -r /defaults/default.cfg /config/.sopel/
+    cp /defaults/default.cfg /config/.sopel/
 fi
-if [ ! -d "/config/.sopel/log" ]; then
-    mkdir -p /config/.sopel/log
+if [ ! -d "/config/.sopel/logs" ]; then
+    mkdir -p /config/.sopel/logs
 fi
